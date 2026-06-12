@@ -1,0 +1,8 @@
+.herohed {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    background-color: #afdde5;
+    color: white;
+    border-radius: 15px;
+}
