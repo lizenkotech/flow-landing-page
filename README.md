@@ -1,4 +1,4 @@
-# Flow — Startup Landing Page Concept
+flow-landing-page
 
 A modern landing page concept for a fictional startup called **Flow**. This project was built to practice structuring real-world marketing websites using semantic HTML and Flexbox-based CSS layouts.
 
