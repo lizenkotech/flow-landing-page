@@ -1,42 +1,450 @@
+/* =========================
+   RESET
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* =========================
+   BODY
+========================= */
 body {
-
-    font-family: 'Roboto', sans-serif;
-    font-size: 18px;
+    font-family: 'Inter', sans-serif;
+    background: #000;
+    color: #923abf;
+    min-height: 100vh;
     line-height: 1.6;
-    background-color: rgb(241, 213, 244);
-    color: #222;
-    padding: 40px;
-    max-width: 900px;
-    margin: 0 auto;
-    padding: 40px;
 }
 
-h1 {
-    text-align: center;
-    color: #00539f;
-    text-shadow: 2px 2px 1px black;
-    margin-bottom: 20px;
+/* =========================
+   HEADER / NAVIGATION
+========================= */
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 100px;
 }
 
-h2 {
-    margin: 20px 0 10px;
+.nav-links {
+    display: flex;
+    gap: 20px;
+    list-style: none;
 }
 
-h3 {
-    margin: 15px 0 10px;
-}
+.logo {}
 
-p {
-    color: rgb(238, 106, 106);
-}
 
-.herohed {
+.nav-links li {}
+
+.nav-links a {}
+
+.nav-links a:hover {}
+
+/* =========================
+   HERO SECTION
+========================= */
+
+.hero {}
+
+.hero-text {}
+
+.hero-text h1 {}
+
+.hero-text p {}
+
+.hero-image {}
+
+.hero-image img {}
+
+/* =========================
+   BUTTONS
+========================= */
+
+button {}
+
+button:hover {}
+
+/* =========================
+   INFO SECTION
+========================= */
+
+.info {}
+
+.info h2 {}
+
+.info-cards {}
+
+.card {
+    flex: 1;
     display: flex;
     flex-direction: column;
-    padding: 20px;
-    background-color: #a1dfea;
-    color: white;
-    border-radius: 15px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 8px;
+}
+
+.card-image {}
+
+.card p {}
+
+.item {
+    flex: 1;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    gap: 8px;
+}
+
+/* =========================
+   QUOTE SECTION
+========================= */
+
+.quote {}
+
+.quote p {}
+
+.quote h4 {}
+
+/* =========================
+   CALL TO ACTION (CTA)
+========================= */
+
+.cta {
+    background-color: #01142e;
+    max-width: 700px;
+    padding: 32px 60px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 60px;
+    border-radius: 8px;
+    flex: 1;
+}
+
+.cta-text span {
+    padding: 0;
+    margin: 0;
+    font-size: 24px;
+    font-weight: 700;
+    color: rgb(242, 232, 221);
+}
+
+.cta h3 {}
+
+.cta-text p {
+    margin: 0;
+    padding: 0;
+    font-size: 15px;
+}
+
+.cta .buttons {
+    background-color: #6d88ac;
+    border: 1px solid rgb(242, 232, 221);
+    align-self: flex-end;
+}
+
+.book-now {
+    background-color: #64def6;
+    border: 1px solid rgb(9, 7, 5);
+    align-self: flex-end;
+}
+
+.contact {}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    padding: 10px;
+    background-color: #a1318b;
+    color: rgb(242, 232, 221);
+    display: flex;
+    justify-content: center;
+}
+
+/* =========================
+   UTILITIES (OPTIONAL)
+========================= */
+
+.container {}
+
+.hidden {}
+
+
+
+
+
+
+
+
+.title {
+    font-weight: 700;
+    font-size: 24px
+}
+
+
+
+/* Enhanced background colors - Purple/Pink/Green palette */
+.neural-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -2;
+    background: radial-gradient(circle at 15% 85%, rgba(75, 0, 130, 0.7) 0%, transparent 50%), radial-gradient(circle at 85% 15%, rgba(139, 37, 99, 0.8) 0%, transparent 50%), radial-gradient(circle at 45% 60%, rgba(128, 0, 128, 0.6) 0%, transparent 50%), radial-gradient(circle at 70% 40%, rgba(34, 139, 34, 0.4) 0%, transparent 50%), linear-gradient(135deg, #0a0a0a 0%, #2d1b3d 50%, #000000 100%);
+    animation: backgroundPulse 14s ease-in-out infinite;
+}
+
+@keyframes backgroundPulse {
+
+    0%,
+    100% {
+        filter: brightness(0.9) saturate(1.4) hue-rotate(0deg);
+    }
+
+    33% {
+        filter: brightness(1.1) saturate(1.7) hue-rotate(15deg);
+    }
+
+    66% {
+        filter: brightness(1.0) saturate(1.5) hue-rotate(-10deg);
+    }
+}
+
+/* Floating geometric shapes */
+.geometric-shapes {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    overflow: hidden;
+}
+
+.shape {
+    position: absolute;
+    border: 1px solid rgba(0, 255, 255, 0.3);
+    animation: floatShape 20s linear infinite;
+}
+
+.shape:nth-child(1) {
+    width: 100px;
+    height: 100px;
+    left: 10%;
+    animation-delay: 0s;
+    border-color: rgba(255, 105, 180, 0.4);
+}
+
+.shape:nth-child(2) {
+    width: 60px;
+    height: 60px;
+    left: 70%;
+    animation-delay: -5s;
+    border-radius: 50%;
+    border-color: rgba(147, 112, 219, 0.4);
+}
+
+.shape:nth-child(3) {
+    width: 80px;
+    height: 80px;
+    left: 30%;
+    animation-delay: -10s;
+    transform: rotate(45deg);
+    border-color: rgba(224, 163, 255, 0.4);
+}
+
+.shape:nth-child(4) {
+    width: 120px;
+    height: 120px;
+    left: 50%;
+    animation-delay: -15s;
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+    background: linear-gradient(45deg, rgba(255, 105, 180, 0.1), transparent);
+}
+
+@keyframes floatShape {
+    from {
+        transform: translateY(100vh) rotate(0deg);
+        opacity: 0;
+    }
+
+    10%,
+    90% {
+        opacity: 1;
+    }
+
+    to {
+        transform: translateY(-100px) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+/* Neural network lines */
+.neural-lines {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.neural-line {
+    position: absolute;
+    background: linear-gradient(90deg, transparent, #00ffff, transparent);
+    height: 1px;
+    animation: neuralPulse 3s ease-in-out infinite;
+}
+
+.neural-line:nth-child(1) {
+    top: 20%;
+    left: 0;
+    width: 100%;
+    background: linear-gradient(90deg, transparent, #e0a3ff, transparent);
+    animation-delay: 0s;
+}
+
+.neural-line:nth-child(2) {
+    top: 60%;
+    left: 0;
+    width: 100%;
+    background: linear-gradient(90deg, transparent, #ff69b4, transparent);
+    animation-delay: -1s;
+}
+
+.neural-line:nth-child(3) {
+    top: 40%;
+    left: 0;
+    width: 100%;
+    background: linear-gradient(90deg, transparent, #9370db, transparent);
+    animation-delay: -2s;
+}
+
+@keyframes neuralPulse {
+
+    0%,
+    100% {
+        opacity: 0.2;
+        transform: scaleX(0.5);
+    }
+
+    50% {
+        opacity: 1;
+        transform: scaleX(1);
+    }
+}
+
+
+/* Glassmorphism styles */
+.glass {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+.glass-strong {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(25px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 25px;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
+}
+
+.feature-visual:hover::before {
+    background: linear-gradient(45deg, rgba(224, 163, 255, 0.2), rgba(255, 105, 180, 0.2));
+}
+
+.feature-row:nth-child(1) .feature-visual {
+    background-image: url('images/templatemo-neural-01.jpg');
+}
+
+.feature-row:nth-child(2) .feature-visual {
+    background-image: url('images/templatemo-neural-02.jpg');
+}
+
+.feature-row:nth-child(3) .feature-visual {
+    background-image: url('images/templatemo-neural-03.jpg');
+}
+
+/* =========================
+   1. GLOBAL STYLES */
+
+
+
+
+.nav-links {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* =========================
+   1. GLOBAL STYLES */
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 60px 100px;
+}
+
+.hero-text {
+    max-width: 400px;
+}
+
+.hero-image img {
+    width: 300px;
+    border-radius: 10px;
+}
+
+
+
+
+
+/* =========================
+   1. GLOBAL STYLES
+========================*/
+
+.info {
+    text-align: center;
+    padding: 60px 100px;
+}
+
+.info-cards {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.card {
+    width: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card-image {
+    width: 120px;
+    height: 120px;
+    border: 2px solid #333;
+    border-radius: 10px;
+    margin-bottom: 10px;
 }
 
 button {
