@@ -1,19 +1,54 @@
 /* =========================
    1. RESET+BODY
 ========================*/
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+
 
 body {
     font-family: Arial, sans-serif;
-    background: #111;
+    background: #0a0a0a;
     color: #e0a3ff;
     line-height: 1.6;
+    position: relative;
+    overflow-x: hidden;
 }
 
+/* glowing animated background layer */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+
+    background:
+        radial-gradient(circle at 20% 30%, rgba(224, 163, 255, 0.25), transparent 40%),
+        radial-gradient(circle at 80% 70%, rgba(255, 105, 180, 0.2), transparent 45%),
+        radial-gradient(circle at 50% 50%, rgba(0, 255, 200, 0.12), transparent 50%);
+
+    animation: pulseMove 8s ease-in-out infinite;
+    filter: blur(20px);
+    transform: scale(1.2);
+}
+
+/* animation movement */
+@keyframes pulseMove {
+    0% {
+        transform: scale(1.2) translateY(0px);
+        opacity: 0.8;
+    }
+
+    50% {
+        transform: scale(1.25) translateY(-20px);
+        opacity: 1;
+    }
+
+    100% {
+        transform: scale(1.2) translateY(0px);
+        opacity: 0.8;
+    }
+}
 
 /* =========================
    2. HEADER (NAVBAR)
@@ -70,26 +105,63 @@ body {
     padding: 0px;
 }
 
+
 .info-cards {
     display: flex;
+    flex-direction: row;
+    border: 2px solid red;
+    /* IMPORTANT */
     justify-content: center;
+    align-items: flex-start;
     gap: 40px;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
+    /* prevents stacking */
 }
 
 .card {
-    width: 160px;
+    width: 180px;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(224, 163, 255, 0.2);
+    border-radius: 14px;
+    padding: 16px;
+
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 10px;
+    text-align: center;
+
+    gap: 12px;
+
+    position: relative;
+    overflow: hidden;
+
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
 }
 
-.card-image {
+.card img {
     width: 120px;
     height: 120px;
-    border: 2px solid #e0a3ff;
+    object-fit: cover;
     border-radius: 10px;
+    transition: transform 0.4s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px) scale(1.05);
+    box-shadow: 0 0 25px rgba(224, 163, 255, 0.4),
+        0 0 60px rgba(161, 223, 234, 0.2);
+    border-color: rgba(224, 163, 255, 0.6);
+}
+
+.card:hover img {
+    transform: scale(3.08);
+}
+
+.card p {
+    font-size: 20px;
+    color: #e0a3ff;
+    opacity: 0.9;
 }
 
 /* =========================
@@ -98,7 +170,7 @@ body {
 
 .quote {
 
-    text-align: center;
+    text-align: left;
     font-style: italic;
     padding: 60px;
     color: #ccc;
@@ -135,11 +207,24 @@ button {
     border-radius: 6px;
 }
 
-.footer {
-    padding: 10px;
-    background-color: #a14231;
+footer {
+    width: 100%;
+    background: #1F2937;
+    color: #F9FAF8;
+    text-align: center;
+    padding: 40px 20px;
+    padding-bottom: 30px;
+
+    /* IMPORTANT */
+    position: relative;
+    left: 0;
+}
+
+
+/* background-color: #a14231;
     color: rgb(242, 232, 221);
     display: flex;
     justify-content: center;
     align-content: center;
+    margin-top: auto;
 }
