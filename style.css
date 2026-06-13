@@ -1,14 +1,29 @@
 body {
-    margin: 0 auto;
-    padding: 0px;
-    background-color: rgb(242, 232, 221);
-    font-family: Roboto, sans-serif;
+
+    font-family: 'Roboto', sans-serif;
     font-size: 18px;
-    text-align: center;
+    line-height: 1.6;
+    background-color: rgb(201, 238, 237);
+    color: #222;
+    padding: 40px;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 40px;
 }
 
 h1 {
-    color: blue;
+    text-align: center;
+    color: #00539f;
+    text-shadow: 2px 2px 1px black;
+    margin-bottom: 20px;
+}
+
+h2 {
+    margin: 20px 0 10px;
+}
+
+h3 {
+    margin: 15px 0 10px;
 }
 
 p {
