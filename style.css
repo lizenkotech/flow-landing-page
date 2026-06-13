@@ -3,10 +3,18 @@ body {
     padding-top: 70px;
     font-family: Arial, sans-serif;
     background: radial-gradient(circle at top,
-            #121212 0%,
+            #494343 0%,
             #050505 100%);
     color: var(--white);
     text-align: center;
+}
+
+h1 {
+    color: blue;
+}
+
+p {
+    color: rgb(238, 106, 106);
 }
 
 .herohed {
@@ -16,4 +24,14 @@ body {
     background-color: #a1dfea;
     color: white;
     border-radius: 15px;
+}
+
+button {
+    background-color: #a1dfea;
+    color: rgb(11, 7, 7);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
 }
