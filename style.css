@@ -53,11 +53,57 @@ body::before {
 /* =========================
    2. HEADER (NAVBAR)
 ========================*/
+.logo,
+.nav-links {
+    position: relative;
+    z-index: 1;
+}
+
+.nav-background {
+    position: absolute;
+    inset: 0;
+    background-image: url("./images/LZD-COVER.PNG");
+    background-size: cover;
+    background-position: center;
+    z-index: 0;
+    filter: brightness(0.5);
+    /* darkens image so text is readable */
+}
+
 .header {
+
+    position: relative;
+    height: 220px;
+    /* makes room for cover image */
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    /* pushes nav + logo down */
+    padding: 20px 80px;
+    overflow: hidden;
+    color: white;
+
     display: flex;
     justify-content: space-between;
     align-items: center;
+
     padding: 20px 80px;
+
+    background-image: url("./images/LZD-COVER.PNG");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    position: relative;
+
+    padding: 20px 40px;
+
+    background-image: url("./images/LZD-COVER.PNG");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    position: relative;
 }
 
 .nav-links {
@@ -85,8 +131,10 @@ body::before {
     justify-content: space-between;
     align-items: center;
     padding: 0px;
-    gap: 40px;
+    gap: 50px;
+
 }
+
 
 .hero-text {
     max-width: 450px;
@@ -130,7 +178,7 @@ body::before {
     align-items: center;
     text-align: center;
 
-    gap: 12px;
+    gap: 20px;
 
     position: relative;
     overflow: hidden;
@@ -140,7 +188,7 @@ body::before {
 }
 
 .card img {
-    width: 120px;
+    width: 160px;
     height: 120px;
     object-fit: cover;
     border-radius: 10px;
@@ -159,9 +207,17 @@ body::before {
 }
 
 .card p {
-    font-size: 20px;
+    font-size: 25px;
     color: #e0a3ff;
     opacity: 0.9;
+}
+
+.logo img {
+    width: 99px;
+    height: 99px;
+    border-radius: 50%;
+    border: 2px solid #e0a3ff;
+    box-shadow: 0 0 15px rgba(224, 163, 255, 0.5);
 }
 
 /* =========================
@@ -218,13 +274,4 @@ footer {
     /* IMPORTANT */
     position: relative;
     left: 0;
-}
-
-
-/* background-color: #a14231;
-    color: rgb(242, 232, 221);
-    display: flex;
-    justify-content: center;
-    align-content: center;
-    margin-top: auto;
 }
