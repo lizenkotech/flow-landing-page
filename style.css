@@ -53,11 +53,7 @@ body::before {
 /* =========================
    2. HEADER (NAVBAR)
 ========================*/
-.logo,
-.nav-links {
-    position: relative;
-    z-index: 1;
-}
+
 
 .nav-background {
     position: absolute;
@@ -72,38 +68,22 @@ body::before {
 
 .header {
 
+    background-image: url("./images/LZD-COVER.PNG");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transform: scale(1.1);
+    z-index: 0;
+
     position: relative;
     height: 220px;
-    /* makes room for cover image */
+    padding: 20px 80px;
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
-    /* pushes nav + logo down */
-    padding: 20px 80px;
+    /* IMPORTANT: keeps nav + logo at bottom */
     overflow: hidden;
     color: white;
-
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-    padding: 20px 80px;
-
-    background-image: url("./images/LZD-COVER.PNG");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-
-    position: relative;
-
-    padding: 20px 40px;
-
-    background-image: url("./images/LZD-COVER.PNG");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-
-    position: relative;
 }
 
 .nav-links {
@@ -115,6 +95,12 @@ body::before {
 .nav-links a {
     color: #e0a3ff;
     text-decoration: none;
+}
+
+.logo,
+.nav-links {
+    position: relative;
+    z-index: 1;
 }
 
 /* =========================
@@ -134,7 +120,6 @@ body::before {
     gap: 50px;
 
 }
-
 
 .hero-text {
     max-width: 450px;
@@ -157,7 +142,7 @@ body::before {
 .info-cards {
     display: flex;
     flex-direction: row;
-    border: 2px solid red;
+
     /* IMPORTANT */
     justify-content: center;
     align-items: flex-start;
